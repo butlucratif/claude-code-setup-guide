@@ -258,6 +258,32 @@ export default function Home() {
             </p>
           </div>
 
+          {/* Warp Terminal Recommendation */}
+          <div className="mb-8 bg-gradient-to-br from-[var(--accent-light)] to-[var(--primary-lighter)] p-6 rounded-2xl border-2 border-[var(--accent)]">
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 bg-[var(--accent)] rounded-lg flex items-center justify-center flex-shrink-0">
+                <Terminal className="w-5 h-5 text-white" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold mb-2 text-[var(--text)]">
+                  Recommandation: Utilise Warp Terminal
+                </h3>
+                <p className="text-[var(--text-muted)] mb-3">
+                  N'utilise PAS le terminal Mac/Windows par défaut. Warp est un terminal moderne avec AI, auto-complétion intelligente, et interface premium.
+                </p>
+                <a
+                  href="https://www.warp.dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-[var(--accent)] hover:text-[var(--primary)] font-semibold transition-colors"
+                >
+                  Télécharge Warp gratuitement
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          </div>
+
           <div className="space-y-6">
             {/* Step 1 */}
             <div className="bg-white p-8 rounded-2xl border-2 border-[var(--border)] hover:border-[var(--primary)] transition-all">
@@ -486,108 +512,124 @@ claude`}
         </div>
       </section>
 
-      {/* Zero to App CTA - PUISSANT */}
-      <section className="py-32 px-6 lg:px-8 relative overflow-hidden bg-gradient-to-br from-[var(--primary)] via-[var(--primary-hover)] to-[oklch(0.45_0.22_250)]">
-        {/* Animated background */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse delay-1000"></div>
+      {/* Zero to App CTA - PREMIUM DESIGN */}
+      <section className="relative overflow-hidden bg-[oklch(0.15_0.01_250)]" style={{
+        backgroundImage: `
+          radial-gradient(circle at 20% 30%, oklch(0.25 0.08 250 / 0.3) 0%, transparent 50%),
+          radial-gradient(circle at 80% 70%, oklch(0.25 0.08 145 / 0.2) 0%, transparent 50%),
+          repeating-linear-gradient(0deg, transparent, transparent 2px, oklch(0.18 0.01 250) 2px, oklch(0.18 0.01 250) 4px)
+        `
+      }}>
+        {/* Geometric accent patterns */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 right-20 w-96 h-96 border border-white rounded-full"></div>
+          <div className="absolute bottom-20 left-20 w-64 h-64 border-2 border-white transform rotate-45"></div>
         </div>
 
-        <div className="mx-auto max-w-5xl relative z-10">
-          <div className="text-center text-white mb-12">
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/20 backdrop-blur-sm rounded-full text-white font-bold text-sm mb-8 border-2 border-white/30">
-              <TrendingUp className="w-4 h-4" />
-              Programme d'accompagnement
+        <div className="mx-auto max-w-6xl relative z-10 py-32 px-6 lg:px-12">
+          {/* Badge */}
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[var(--accent)]/20 to-[var(--warning)]/20 backdrop-blur-xl rounded-full border border-[var(--accent)]/30 mb-16">
+              <span className="w-2 h-2 bg-[var(--accent)] rounded-full animate-pulse"></span>
+              <span className="text-white font-semibold text-sm tracking-wide">Programme Zero-to-App</span>
             </div>
-            <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
-              De <span className="relative">zéro<span className="absolute bottom-2 left-0 w-full h-4 bg-white opacity-20"></span></span> à <span className="relative">€45k/projet<span className="absolute bottom-2 left-0 w-full h-4 bg-white opacity-20"></span></span> en créant des apps IA
+          </div>
+
+          {/* Headline - Premium Typography */}
+          <div className="text-center mb-20">
+            <h2 className="text-6xl md:text-7xl lg:text-8xl font-black text-white leading-[0.95] tracking-tight mb-8">
+              Crée & Vends des
+              <br />
+              <span className="bg-gradient-to-r from-[var(--accent)] via-white to-[var(--warning)] bg-clip-text text-transparent">
+                Apps IA
+              </span>
             </h2>
-            <p className="text-2xl mb-4 opacity-95 max-w-4xl mx-auto leading-relaxed">
-              Le setup que tu viens de faire? C'est <strong>l'outil</strong>. Maintenant il te faut <strong>le savoir-faire</strong> pour facturer €15k-€45k par projet.
-            </p>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto leading-relaxed">
-              Je t'apprends à créer et vendre des systèmes IA aux entreprises. Prospection, proposition commerciale, développement, livraison. Le process complet.
+            <p className="text-2xl md:text-3xl text-white/70 max-w-3xl mx-auto leading-relaxed font-light">
+              De zéro à <strong className="text-white font-bold">€2k—€45k par client</strong>
             </p>
           </div>
 
-          {/* Benefits Grid */}
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+          {/* Benefits - Premium Cards */}
+          <div className="grid md:grid-cols-3 gap-6 mb-20">
             {[
               {
-                icon: Target,
-                title: "Trouve tes clients",
-                desc: "Méthode exacte pour identifier les entreprises qui ont besoin d'IA + le pitch qui convertit"
+                number: "01",
+                title: "Applications IA sur mesure",
+                desc: "Chatbots intelligents, automatisation workflow, agents IA, RAG systems. Du concret qui génère de la valeur.",
+                color: "var(--accent)"
               },
               {
-                icon: Code2,
-                title: "Développe avec ce stack",
-                desc: "Utilise Claude Code + ces 87 skills pour livrer des projets production-grade en quelques semaines"
+                number: "02",
+                title: "Stack production-grade",
+                desc: "Claude Code + 87 skills + 277 agents. Livre des projets clients en semaines, pas en mois.",
+                color: "var(--primary)"
               },
               {
-                icon: TrendingUp,
-                title: "Facture premium",
-                desc: "Position toi correctement pour facturer €15k-€45k par projet (pas €2k comme un junior)"
+                number: "03",
+                title: "Minimum €2k/client",
+                desc: "Position premium dès le départ. Méthode complète: prospection, pitch, dev, livraison, facturation.",
+                color: "var(--warning)"
               }
             ].map((item, i) => (
-              <div key={i} className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border-2 border-white/20 hover:bg-white/20 transition-all">
-                <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4">
-                  <item.icon className="w-7 h-7 text-white" />
+              <div
+                key={i}
+                className="group relative p-8 rounded-3xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-white/30 transition-all duration-500 hover:transform hover:-translate-y-2"
+                style={{
+                  boxShadow: '0 20px 60px -15px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)'
+                }}
+              >
+                <div className="absolute top-6 right-6 text-7xl font-black opacity-5 group-hover:opacity-10 transition-opacity">
+                  {item.number}
                 </div>
-                <h3 className="font-bold text-xl mb-2">{item.title}</h3>
-                <p className="text-sm opacity-90 leading-relaxed">{item.desc}</p>
+                <div className="relative">
+                  <div
+                    className="w-1 h-16 mb-6 rounded-full"
+                    style={{ background: `linear-gradient(to bottom, ${item.color}, transparent)` }}
+                  ></div>
+                  <h3 className="text-2xl font-bold text-white mb-4 leading-tight">{item.title}</h3>
+                  <p className="text-white/60 leading-relaxed">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
 
-          {/* Social Proof */}
-          <div className="bg-white/10 backdrop-blur-md border-2 border-white/20 rounded-2xl p-8 mb-12">
-            <div className="flex items-start gap-6 flex-wrap">
-              <div className="flex-1 min-w-64">
-                <p className="text-white text-lg leading-relaxed italic mb-4">
-                  "J'ai suivi Zero-to-App. 6 semaines après: premier client à €18k pour une automatisation IA. Le setup Claude Code + la méthode commerciale, ça change vraiment tout."
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-white/20 rounded-full"></div>
-                  <div>
-                    <p className="font-bold text-white">Thomas R.</p>
-                    <p className="text-sm text-white/80">Ex-dev freelance → Consultant IA</p>
-                  </div>
-                </div>
-              </div>
-              <div className="flex gap-4 items-center">
-                <div className="text-center">
-                  <p className="text-4xl font-black text-white">€18k</p>
-                  <p className="text-sm text-white/80">Premier projet</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-4xl font-black text-white">6 sem</p>
-                  <p className="text-sm text-white/80">Temps écoulé</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Final */}
+          {/* CTA - Premium Button */}
           <div className="text-center">
             <a
-              href="https://tally.so/r/3jdzEd"
+              href="https://calendly.com/yohanlopes/lance-ton-business-d-application-ia"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-4 px-12 py-6 bg-white text-[var(--primary)] rounded-2xl font-black text-xl hover:scale-105 transition-transform shadow-2xl group"
+              className="group inline-block relative"
             >
-              <MessageSquare className="w-7 h-7 group-hover:rotate-12 transition-transform" />
-              Réserve ton appel stratégique (15 min)
-              <span className="px-3 py-1 bg-[var(--accent)] text-white text-sm rounded-full">Gratuit</span>
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[var(--accent)] to-[var(--warning)] rounded-2xl blur-2xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
+
+              {/* Button */}
+              <div className="relative px-12 py-7 bg-gradient-to-r from-[var(--accent)] to-[var(--warning)] rounded-2xl font-black text-2xl text-[oklch(0.15_0.01_250)] flex items-center gap-4 transform group-hover:scale-105 transition-transform duration-300"
+                style={{
+                  boxShadow: '0 20px 60px -10px rgba(0, 0, 0, 0.8), inset 0 1px 0 0 rgba(255, 255, 255, 0.4)'
+                }}
+              >
+                <MessageSquare className="w-8 h-8" />
+                <span>Réserve ton appel (30 min)</span>
+                <Sparkles className="w-7 h-7 animate-pulse" />
+              </div>
             </a>
-            <p className="text-white/90 mt-6 text-base">
-              On analyse ton profil, tes objectifs, et je te montre exactement comment tu peux facturer €15k-€45k/projet avec ce stack.
-            </p>
-            <p className="text-white/70 mt-3 text-sm">
-              Pas de bullshit, pas de vente forcée. Un vrai appel stratégique pour voir si Zero-to-App est fait pour toi.
-            </p>
+
+            {/* Sub-text */}
+            <div className="mt-10 max-w-2xl mx-auto">
+              <p className="text-white/80 text-lg mb-3 leading-relaxed">
+                On analyse ton profil et je te montre <strong className="text-white">comment facturer €2k—€45k</strong> en créant des applications IA pour les entreprises.
+              </p>
+              <p className="text-white/50 text-sm">
+                Pas de vente forcée. Si t'es développeur et que tu veux monétiser l'IA, cet appel est pour toi.
+              </p>
+            </div>
           </div>
         </div>
+
+        {/* Bottom gradient fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
       </section>
 
       {/* Footer - Improved */}
