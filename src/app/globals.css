@@ -13,7 +13,15 @@
   --primary-light: oklch(0.75 0.12 250);
   --primary-lighter: oklch(0.92 0.06 250);
 
-  /* Neutrals - Tintés vers le bleu */
+  /* Dark theme colors */
+  --bg-dark: oklch(0.15 0.01 250);
+  --surface-dark: oklch(0.18 0.01 250);
+  --surface-dark-elevated: oklch(0.22 0.01 250);
+  --text-light: oklch(0.95 0.005 250);
+  --text-light-muted: oklch(0.75 0.005 250);
+  --text-light-subtle: oklch(0.60 0.005 250);
+
+  /* Legacy light theme (kept for compatibility) */
   --bg: oklch(0.98 0.005 250);
   --surface: oklch(0.96 0.008 250);
   --surface-elevated: oklch(0.99 0.003 250);
@@ -28,6 +36,7 @@
   /* Borders */
   --border: oklch(0.90 0.005 250);
   --border-hover: oklch(0.85 0.008 250);
+  --border-dark: oklch(0.30 0.02 250);
 
   /* Warning/CTA - Orange */
   --warning: oklch(0.65 0.15 40);
@@ -40,8 +49,8 @@
 }
 
 body {
-  background: var(--bg);
-  color: var(--text);
+  background: var(--bg-dark);
+  color: var(--text-light);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

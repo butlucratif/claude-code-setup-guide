@@ -158,32 +158,54 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section - Improved */}
-      <section className="py-24 px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary-lighter)] to-white opacity-50"></div>
-        <div className="mx-auto max-w-6xl relative">
+    <div className="min-h-screen bg-[var(--bg-dark)]">
+      {/* Hero Section - Premium Dark */}
+      <section className="py-24 px-6 lg:px-8 relative overflow-hidden" style={{
+        backgroundImage: `
+          radial-gradient(circle at 20% 20%, oklch(0.25 0.08 250 / 0.4) 0%, transparent 50%),
+          radial-gradient(circle at 80% 80%, oklch(0.25 0.08 145 / 0.3) 0%, transparent 50%),
+          repeating-linear-gradient(0deg, transparent, transparent 2px, oklch(0.18 0.01 250) 2px, oklch(0.18 0.01 250) 4px)
+        `
+      }}>
+        {/* Geometric decorations */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-40 right-20 w-[500px] h-[500px] border-2 border-white rounded-full"></div>
+          <div className="absolute bottom-20 left-10 w-96 h-96 border border-white transform rotate-45"></div>
+          <div className="absolute top-1/2 left-1/4 w-64 h-64 border border-white rounded-full"></div>
+        </div>
+
+        <div className="mx-auto max-w-6xl relative z-10">
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white border-2 border-[var(--primary)] rounded-full text-[var(--primary)] font-bold text-sm mb-8 shadow-lg">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/[0.08] backdrop-blur-xl border border-white/20 rounded-full text-white font-bold text-sm mb-8 shadow-2xl">
               <Terminal className="w-4 h-4" />
               Le Stack Complet des Pros
             </div>
-            <h1 className="text-hero mb-6 leading-tight">
-              Transforme ton <span className="text-[var(--primary)] relative">Claude Code<span className="absolute bottom-0 left-0 w-full h-3 bg-[var(--primary)] opacity-10 -z-10"></span></span> en Machine de Guerre IA
+            <h1 className="text-hero mb-6 leading-tight text-white">
+              Transforme ton <span className="bg-gradient-to-r from-[var(--primary)] via-[var(--accent)] to-[var(--warning)] bg-clip-text text-transparent">Claude Code</span> en Machine de Guerre IA
             </h1>
-            <p className="text-xl text-[var(--text-muted)] max-w-4xl mx-auto mb-8 leading-relaxed">
-              <strong className="text-[var(--text)]">87+ skills experts</strong>, <strong className="text-[var(--text)]">277 agents spécialisés</strong>, et <strong className="text-[var(--text)]">115 commandes</strong> pour créer et vendre de l'IA aux entreprises. La même config que les pros qui facturent €15k-€45k par projet.
+            <p className="text-xl text-white/70 max-w-4xl mx-auto mb-8 leading-relaxed">
+              <strong className="text-white">87+ skills experts</strong>, <strong className="text-white">277 agents spécialisés</strong>, et <strong className="text-white">115 commandes</strong> pour créer et vendre de l'IA aux entreprises. La même config que les pros qui facturent €15k-€45k par projet.
             </p>
             <div className="flex gap-4 justify-center flex-wrap mb-12">
               <a
                 href="#installation"
-                className="px-10 py-5 bg-[var(--primary)] text-white rounded-2xl font-bold hover:bg-[var(--primary-hover)] transition-all flex items-center gap-3 shadow-xl hover:shadow-2xl hover:-translate-y-1"
+                className="group relative inline-block"
               >
-                <Rocket className="w-6 h-6" />
-                Setup gratuit (30 min)
+                {/* Glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
+
+                {/* Button */}
+                <div className="relative px-10 py-5 bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] rounded-2xl font-bold flex items-center gap-3 transform group-hover:scale-105 transition-all"
+                  style={{
+                    boxShadow: '0 20px 60px -10px rgba(0, 0, 0, 0.8), inset 0 1px 0 0 rgba(255, 255, 255, 0.3)'
+                  }}
+                >
+                  <Rocket className="w-6 h-6 text-white" />
+                  <span className="text-white">Setup gratuit (30 min)</span>
+                </div>
               </a>
             </div>
-            <div className="flex items-center justify-center gap-8 text-sm text-[var(--text-muted)]">
+            <div className="flex items-center justify-center gap-8 text-sm text-white/60 flex-wrap">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-[var(--accent)]" />
                 <span>Installation guidée</span>
@@ -201,12 +223,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why This Matters - New Section */}
-      <section className="py-20 px-6 lg:px-8 bg-gradient-to-b from-white to-[var(--surface)]">
-        <div className="mx-auto max-w-6xl">
+      {/* Why This Matters - Premium Dark */}
+      <section className="py-20 px-6 lg:px-8 relative overflow-hidden" style={{
+        backgroundImage: `
+          radial-gradient(circle at 80% 20%, oklch(0.20 0.08 145 / 0.3) 0%, transparent 60%),
+          radial-gradient(circle at 20% 80%, oklch(0.20 0.08 250 / 0.3) 0%, transparent 60%),
+          repeating-linear-gradient(45deg, transparent, transparent 2px, oklch(0.17 0.01 250) 2px, oklch(0.17 0.01 250) 4px)
+        `
+      }}>
+        {/* Geometric decorations */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-10 left-10 w-80 h-80 border border-white transform -rotate-12"></div>
+          <div className="absolute bottom-10 right-10 w-72 h-72 border border-white rounded-full"></div>
+        </div>
+
+        <div className="mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-h2 mb-4">Pourquoi cette config change tout</h2>
-            <p className="text-body-lg text-[var(--text-muted)] max-w-3xl mx-auto">
+            <h2 className="text-h2 mb-4 text-white">Pourquoi cette config <span className="bg-gradient-to-r from-[var(--warning)] to-[var(--accent)] bg-clip-text text-transparent">change tout</span></h2>
+            <p className="text-body-lg text-white/70 max-w-3xl mx-auto">
               Claude Code seul, c'est bien. Avec ce stack, c'est une arme de production massive.
             </p>
           </div>
@@ -216,31 +250,40 @@ export default function Home() {
                 icon: Zap,
                 title: "Terminal = 10x plus puissant",
                 desc: "Accès direct à git, npm, docker, databases. La web app ne peut pas faire ça. Les pros utilisent le terminal.",
-                stat: "10x"
+                stat: "10x",
+                color: "var(--warning)"
               },
               {
                 icon: Shield,
                 title: "277 agents spécialisés",
                 desc: "Marketing, Sales, Design, Engineering, Security. Une agence IA complète dans ton terminal.",
-                stat: "277"
+                stat: "277",
+                color: "var(--primary)"
               },
               {
                 icon: Code2,
                 title: "87 skills production-ready",
                 desc: "Frontend design, testing, documentation, security audits. Tout ce qu'il faut pour livrer des projets clients.",
-                stat: "87"
+                stat: "87",
+                color: "var(--accent)"
               }
             ].map((item, i) => (
-              <div key={i} className="relative p-8 rounded-2xl bg-white border-2 border-[var(--border)] hover:border-[var(--primary)] hover:shadow-2xl transition-all group">
-                <div className="absolute top-4 right-4 text-6xl font-black text-[var(--primary)] opacity-5 group-hover:opacity-10 transition-opacity">
+              <div key={i} className="group relative p-8 rounded-3xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-white/30 transition-all duration-500 hover:transform hover:-translate-y-2"
+                style={{
+                  boxShadow: '0 20px 60px -15px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)'
+                }}
+              >
+                <div className="absolute top-6 right-6 text-7xl font-black text-white opacity-5 group-hover:opacity-10 transition-opacity">
                   {item.stat}
                 </div>
                 <div className="relative">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[var(--primary)] to-[var(--primary-hover)] rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <item.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                  <p className="text-[var(--text-muted)] leading-relaxed">{item.desc}</p>
+                  {/* Color-coded accent bar */}
+                  <div
+                    className="w-1 h-16 mb-6 rounded-full"
+                    style={{ background: `linear-gradient(to bottom, ${item.color}, transparent)` }}
+                  ></div>
+                  <h3 className="text-xl font-bold mb-3 text-white">{item.title}</h3>
+                  <p className="text-white/60 leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -248,52 +291,70 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Installation Guide - Improved */}
-      <section id="installation" className="py-24 px-6 lg:px-8">
-        <div className="mx-auto max-w-5xl">
+      {/* Installation Guide - Premium Dark */}
+      <section id="installation" className="py-24 px-6 lg:px-8 relative overflow-hidden" style={{
+        backgroundImage: `
+          radial-gradient(circle at 50% 50%, oklch(0.20 0.08 250 / 0.2) 0%, transparent 70%),
+          repeating-linear-gradient(90deg, transparent, transparent 2px, oklch(0.17 0.01 250) 2px, oklch(0.17 0.01 250) 4px)
+        `
+      }}>
+        <div className="mx-auto max-w-5xl relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-h2 mb-4">Installation (30 minutes max)</h2>
-            <p className="text-body-lg text-[var(--text-muted)]">
+            <h2 className="text-h2 mb-4 text-white">Installation <span className="bg-gradient-to-r from-[var(--accent)] to-[var(--primary)] bg-clip-text text-transparent">(30 minutes max)</span></h2>
+            <p className="text-body-lg text-white/70">
               Suis ces 6 étapes pour avoir exactement le même setup que les pros
             </p>
           </div>
 
-          {/* Warp Terminal Recommendation */}
-          <div className="mb-8 bg-gradient-to-br from-[var(--accent-light)] to-[var(--primary-lighter)] p-6 rounded-2xl border-2 border-[var(--accent)]">
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 bg-[var(--accent)] rounded-lg flex items-center justify-center flex-shrink-0">
-                <Terminal className="w-5 h-5 text-white" />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-xl font-bold mb-2 text-[var(--text)]">
-                  Recommandation: Utilise Warp Terminal
-                </h3>
-                <p className="text-[var(--text-muted)] mb-3">
-                  N'utilise PAS le terminal Mac/Windows par défaut. Warp est un terminal moderne avec AI, auto-complétion intelligente, et interface premium.
-                </p>
-                <a
-                  href="https://www.warp.dev"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[var(--accent)] hover:text-[var(--primary)] font-semibold transition-colors"
-                >
-                  Télécharge Warp gratuitement
-                  <ExternalLink className="w-4 h-4" />
-                </a>
+          {/* Warp Terminal Recommendation - Premium */}
+          <div className="mb-8 relative group">
+            {/* Glow effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[var(--accent)] to-[var(--primary)] rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
+
+            <div className="relative p-6 rounded-2xl bg-white/[0.05] backdrop-blur-xl border border-[var(--accent)]/30"
+              style={{
+                boxShadow: '0 10px 40px -10px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)'
+              }}
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 bg-gradient-to-br from-[var(--accent)] to-[var(--primary)] rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <Terminal className="w-5 h-5 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold mb-2 text-white">
+                    Recommandation: Utilise Warp Terminal
+                  </h3>
+                  <p className="text-white/70 mb-3">
+                    N'utilise PAS le terminal Mac/Windows par défaut. Warp est un terminal moderne avec AI, auto-complétion intelligente, et interface premium.
+                  </p>
+                  <a
+                    href="https://www.warp.dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-[var(--accent)] hover:text-white font-semibold transition-colors"
+                  >
+                    Télécharge Warp gratuitement
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
           <div className="space-y-6">
             {/* Step 1 */}
-            <div className="bg-white p-8 rounded-2xl border-2 border-[var(--border)] hover:border-[var(--primary)] transition-all">
+            <div className="group p-8 rounded-3xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-white/30 transition-all duration-500 hover:transform hover:-translate-y-1"
+              style={{
+                boxShadow: '0 20px 60px -15px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)'
+              }}
+            >
               <div className="flex items-start gap-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-[var(--primary)] to-[var(--primary-hover)] text-white rounded-xl flex items-center justify-center font-black text-lg flex-shrink-0 shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] text-white rounded-xl flex items-center justify-center font-black text-lg flex-shrink-0 shadow-lg">
                   1
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3">Claude Code CLI</h3>
-                  <p className="text-[var(--text-muted)] mb-4">
+                  <h3 className="text-2xl font-bold mb-3 text-white">Claude Code CLI</h3>
+                  <p className="text-white/70 mb-4">
                     Le CLI officiel Anthropic. Si tu ne l'as pas encore:
                   </p>
                   <CodeBlock
@@ -309,15 +370,19 @@ claude --version`}
             </div>
 
             {/* Step 2 */}
-            <div className="bg-white p-8 rounded-2xl border-2 border-[var(--border)] hover:border-[var(--primary)] transition-all">
+            <div className="group p-8 rounded-3xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-white/30 transition-all duration-500 hover:transform hover:-translate-y-1"
+              style={{
+                boxShadow: '0 20px 60px -15px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)'
+              }}
+            >
               <div className="flex items-start gap-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-[var(--primary)] to-[var(--primary-hover)] text-white rounded-xl flex items-center justify-center font-black text-lg flex-shrink-0 shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] text-white rounded-xl flex items-center justify-center font-black text-lg flex-shrink-0 shadow-lg">
                   2
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3">Everything Claude Code (ECC)</h3>
-                  <p className="text-[var(--text-muted)] mb-4">
-                    <strong>277 agents + 200+ skills + 115 commands.</strong> Le système d'optimisation complet des pros.
+                  <h3 className="text-2xl font-bold mb-3 text-white">Everything Claude Code (ECC)</h3>
+                  <p className="text-white/70 mb-4">
+                    <strong className="text-white">277 agents + 200+ skills + 115 commands.</strong> Le système d'optimisation complet des pros.
                   </p>
                   <CodeBlock
                     code={`git clone https://github.com/affaan-m/everything-claude-code.git
@@ -328,8 +393,8 @@ cd everything-claude-code
 cd .. && rm -rf everything-claude-code`}
                     onCopy={handleCopy}
                   />
-                  <div className="mt-4 p-4 bg-[var(--accent-light)] border-2 border-[var(--accent)] rounded-xl">
-                    <p className="text-sm font-semibold text-[var(--text)]">
+                  <div className="mt-4 p-4 bg-[var(--accent)]/10 border border-[var(--accent)]/30 rounded-xl backdrop-blur-sm">
+                    <p className="text-sm font-semibold text-white/90">
                       ✅ Résultat: 1.3GB installés dans ~/.claude/ — zero impact performance
                     </p>
                   </div>
@@ -338,18 +403,22 @@ cd .. && rm -rf everything-claude-code`}
             </div>
 
             {/* Step 3 - Agency Agents */}
-            <div className="bg-white p-8 rounded-2xl border-2 border-[var(--border)] hover:border-[var(--primary)] transition-all">
+            <div className="group p-8 rounded-3xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-white/30 transition-all duration-500 hover:transform hover:-translate-y-1"
+              style={{
+                boxShadow: '0 20px 60px -15px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)'
+              }}
+            >
               <div className="flex items-start gap-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-[var(--primary)] to-[var(--primary-hover)] text-white rounded-xl flex items-center justify-center font-black text-lg flex-shrink-0 shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] text-white rounded-xl flex items-center justify-center font-black text-lg flex-shrink-0 shadow-lg">
                   3
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3 flex items-center gap-3">
+                  <h3 className="text-2xl font-bold mb-3 flex items-center gap-3 text-white flex-wrap">
                     Agency Agents
-                    <span className="px-3 py-1 bg-[var(--warning-light)] text-[var(--warning)] text-xs font-bold rounded-full">96.6K ⭐</span>
+                    <span className="px-3 py-1 bg-[var(--warning)]/20 text-[var(--warning)] text-xs font-bold rounded-full border border-[var(--warning)]/30">96.6K ⭐</span>
                   </h3>
-                  <p className="text-[var(--text-muted)] mb-4">
-                    <strong>Une agence IA complète:</strong> Marketing (32 agents), Engineering (30+), Design (8), Sales (9), Security...
+                  <p className="text-white/70 mb-4">
+                    <strong className="text-white">Une agence IA complète:</strong> Marketing (32 agents), Engineering (30+), Design (8), Sales (9), Security...
                   </p>
                   <CodeBlock
                     code={`# Envoie ce lien dans Claude Code
@@ -364,15 +433,19 @@ https://github.com/msitarzewski/agency-agents
             </div>
 
             {/* Step 4 - Awesome Claude Skills */}
-            <div className="bg-white p-8 rounded-2xl border-2 border-[var(--border)] hover:border-[var(--primary)] transition-all">
+            <div className="group p-8 rounded-3xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-white/30 transition-all duration-500 hover:transform hover:-translate-y-1"
+              style={{
+                boxShadow: '0 20px 60px -15px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)'
+              }}
+            >
               <div className="flex items-start gap-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-[var(--primary)] to-[var(--primary-hover)] text-white rounded-xl flex items-center justify-center font-black text-lg flex-shrink-0 shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] text-white rounded-xl flex items-center justify-center font-black text-lg flex-shrink-0 shadow-lg">
                   4
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3">Awesome Claude Skills</h3>
-                  <p className="text-[var(--text-muted)] mb-4">
-                    <strong>Directory complet de skills:</strong> Tous les skills officiels + community skills battle-tested.
+                  <h3 className="text-2xl font-bold mb-3 text-white">Awesome Claude Skills</h3>
+                  <p className="text-white/70 mb-4">
+                    <strong className="text-white">Directory complet de skills:</strong> Tous les skills officiels + community skills battle-tested.
                   </p>
                   <CodeBlock
                     code={`# Envoie ce lien dans Claude Code
@@ -387,15 +460,19 @@ https://github.com/travisvn/awesome-claude-skills
             </div>
 
             {/* Step 5 - Impeccable */}
-            <div className="bg-white p-8 rounded-2xl border-2 border-[var(--border)] hover:border-[var(--primary)] transition-all">
+            <div className="group p-8 rounded-3xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-white/30 transition-all duration-500 hover:transform hover:-translate-y-1"
+              style={{
+                boxShadow: '0 20px 60px -15px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)'
+              }}
+            >
               <div className="flex items-start gap-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-[var(--primary)] to-[var(--primary-hover)] text-white rounded-xl flex items-center justify-center font-black text-lg flex-shrink-0 shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] text-white rounded-xl flex items-center justify-center font-black text-lg flex-shrink-0 shadow-lg">
                   5
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3">Impeccable Design System</h3>
-                  <p className="text-[var(--text-muted)] mb-4">
-                    <strong>Design premium pour tes projets clients.</strong> OKLCH colors, pas de false urgency, pro hierarchy.
+                  <h3 className="text-2xl font-bold mb-3 text-white">Impeccable Design System</h3>
+                  <p className="text-white/70 mb-4">
+                    <strong className="text-white">Design premium pour tes projets clients.</strong> OKLCH colors, pas de false urgency, pro hierarchy.
                   </p>
                   <CodeBlock
                     code={`npx skills add pbakaus/impeccable`}
@@ -406,14 +483,18 @@ https://github.com/travisvn/awesome-claude-skills
             </div>
 
             {/* Step 6 - Verify */}
-            <div className="bg-white p-8 rounded-2xl border-2 border-[var(--border)] hover:border-[var(--primary)] transition-all">
+            <div className="group p-8 rounded-3xl bg-white/[0.03] backdrop-blur-xl border border-[var(--accent)]/30 hover:border-[var(--accent)]/60 transition-all duration-500 hover:transform hover:-translate-y-1"
+              style={{
+                boxShadow: '0 20px 60px -15px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)'
+              }}
+            >
               <div className="flex items-start gap-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-[var(--accent)] to-[var(--accent)] text-white rounded-xl flex items-center justify-center font-black text-lg flex-shrink-0 shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-[var(--accent)] to-[var(--primary)] text-white rounded-xl flex items-center justify-center font-black text-lg flex-shrink-0 shadow-lg">
                   ✓
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3">Vérification</h3>
-                  <p className="text-[var(--text-muted)] mb-4">
+                  <h3 className="text-2xl font-bold mb-3 text-white">Vérification</h3>
+                  <p className="text-white/70 mb-4">
                     Teste que tout est OK:
                   </p>
                   <CodeBlock
@@ -433,57 +514,81 @@ claude`}
           </div>
 
           {copiedCommand && (
-            <div className="mt-8 p-6 bg-[var(--accent-light)] border-2 border-[var(--accent)] rounded-2xl text-center animate-pulse">
+            <div className="mt-8 p-6 bg-[var(--accent)]/10 border border-[var(--accent)]/30 rounded-2xl text-center animate-pulse backdrop-blur-xl"
+              style={{
+                boxShadow: '0 10px 40px -10px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)'
+              }}
+            >
               <CheckCircle2 className="w-6 h-6 inline text-[var(--accent)] mr-3" />
-              <span className="text-[var(--text)] font-semibold">Commande copiée! Colle-la dans ton terminal 🚀</span>
+              <span className="text-white font-semibold">Commande copiée! Colle-la dans ton terminal 🚀</span>
             </div>
           )}
         </div>
       </section>
 
-      {/* Skills List - Improved */}
-      <section className="py-20 px-6 lg:px-8 bg-white">
-        <div className="mx-auto max-w-7xl">
+      {/* Skills List - Premium Dark */}
+      <section className="py-20 px-6 lg:px-8 relative overflow-hidden" style={{
+        backgroundImage: `
+          radial-gradient(circle at 30% 40%, oklch(0.22 0.08 40 / 0.3) 0%, transparent 60%),
+          radial-gradient(circle at 70% 60%, oklch(0.20 0.08 250 / 0.3) 0%, transparent 60%),
+          repeating-linear-gradient(135deg, transparent, transparent 2px, oklch(0.17 0.01 250) 2px, oklch(0.17 0.01 250) 4px)
+        `
+      }}>
+        {/* Geometric decorations */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 right-1/4 w-96 h-96 border border-white transform rotate-12"></div>
+          <div className="absolute bottom-40 left-1/3 w-72 h-72 border border-white rounded-full"></div>
+        </div>
+
+        <div className="mx-auto max-w-7xl relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-h2 mb-4">Les 87 Skills que tu auras</h2>
-            <p className="text-body-lg text-[var(--text-muted)]">
+            <h2 className="text-h2 mb-4 text-white">Les <span className="bg-gradient-to-r from-[var(--accent)] to-[var(--warning)] bg-clip-text text-transparent">87 Skills</span> que tu auras</h2>
+            <p className="text-body-lg text-white/70">
               Organisés par catégorie. S'activent automatiquement selon le contexte.
             </p>
           </div>
 
           <div className="space-y-4">
             {Object.entries(skills).map(([category, skillList]) => (
-              <div key={category} className="bg-white border-2 border-[var(--border)] rounded-2xl overflow-hidden hover:border-[var(--primary)] transition-all">
+              <div key={category} className="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden hover:border-white/30 transition-all duration-500"
+                style={{
+                  boxShadow: '0 10px 40px -10px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)'
+                }}
+              >
                 <button
                   onClick={() => toggleCategory(category)}
-                  className="w-full px-8 py-6 flex items-center justify-between hover:bg-[var(--surface)] transition-colors"
+                  className="w-full px-8 py-6 flex items-center justify-between hover:bg-white/[0.02] transition-colors"
                 >
                   <div className="flex items-center gap-4">
                     <span className="text-3xl">{category.split(' ')[0]}</span>
                     <div>
-                      <h3 className="text-xl font-bold text-left">{category.split(' ').slice(1).join(' ')}</h3>
-                      <p className="text-sm text-[var(--text-muted)] text-left font-semibold">{skillList.length} skills</p>
+                      <h3 className="text-xl font-bold text-left text-white">{category.split(' ').slice(1).join(' ')}</h3>
+                      <p className="text-sm text-white/60 text-left font-semibold">{skillList.length} skills</p>
                     </div>
                   </div>
                   {expandedCategories[category] ? (
-                    <ChevronUp className="w-6 h-6 text-[var(--primary)]" />
+                    <ChevronUp className="w-6 h-6 text-[var(--accent)]" />
                   ) : (
-                    <ChevronDown className="w-6 h-6 text-[var(--text-muted)]" />
+                    <ChevronDown className="w-6 h-6 text-white/50" />
                   )}
                 </button>
 
                 {expandedCategories[category] && (
-                  <div className="px-8 pb-8 pt-4 border-t-2 border-[var(--border)] bg-[var(--surface)]">
+                  <div className="px-8 pb-8 pt-4 border-t border-white/10 bg-white/[0.02]">
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                       {skillList.map((skill) => (
-                        <div key={skill.name} className="skill-card">
+                        <div key={skill.name} className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[var(--accent)]/50 transition-all duration-300 hover:transform hover:-translate-y-1"
+                          style={{
+                            boxShadow: '0 4px 20px -5px rgba(0, 0, 0, 0.3)'
+                          }}
+                        >
                           <div className="flex items-start gap-3">
-                            <div className="w-2 h-2 bg-[var(--primary)] rounded-full mt-2 flex-shrink-0"></div>
+                            <div className="w-2 h-2 bg-[var(--accent)] rounded-full mt-2 flex-shrink-0"></div>
                             <div className="flex-1 min-w-0">
-                              <h4 className="font-mono text-sm font-bold text-[var(--primary)] mb-1 truncate">
+                              <h4 className="font-mono text-sm font-bold text-[var(--accent)] mb-1 truncate">
                                 {skill.name}
                               </h4>
-                              <p className="text-xs text-[var(--text-muted)] leading-relaxed">
+                              <p className="text-xs text-white/60 leading-relaxed">
                                 {skill.desc}
                               </p>
                             </div>
@@ -497,14 +602,18 @@ claude`}
             ))}
           </div>
 
-          <div className="mt-12 p-8 bg-gradient-to-br from-[var(--accent-light)] to-white border-2 border-[var(--accent)] rounded-2xl">
+          <div className="mt-12 p-8 bg-white/[0.05] backdrop-blur-xl border border-[var(--accent)]/30 rounded-3xl"
+            style={{
+              boxShadow: '0 20px 60px -15px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)'
+            }}
+          >
             <div className="flex items-start gap-4">
               <Sparkles className="w-8 h-8 text-[var(--accent)] flex-shrink-0 mt-1" />
               <div>
-                <h3 className="font-bold text-xl mb-2">Auto-activation intelligente</h3>
-                <p className="text-[var(--text-muted)] leading-relaxed">
+                <h3 className="font-bold text-xl mb-2 text-white">Auto-activation intelligente</h3>
+                <p className="text-white/70 leading-relaxed">
                   Les skills s'activent automatiquement selon ton contexte. Tu codes du React? Les skills frontend se déclenchent.
-                  Tu fais de la sécurité? Les skills audit s'activent. <strong>Zero configuration manuelle.</strong>
+                  Tu fais de la sécurité? Les skills audit s'activent. <strong className="text-white">Zero configuration manuelle.</strong>
                 </p>
               </div>
             </div>
@@ -632,14 +741,22 @@ claude`}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
       </section>
 
-      {/* Footer - Improved */}
-      <footer className="py-12 px-6 lg:px-8 border-t-2 border-[var(--border)] bg-white">
-        <div className="mx-auto max-w-7xl">
+      {/* Footer - Premium Dark */}
+      <footer className="relative py-12 px-6 lg:px-8 border-t border-white/10 overflow-hidden">
+        {/* Gradient fade from CTA section */}
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[var(--bg-dark)] to-transparent pointer-events-none"></div>
+
+        {/* Background pattern */}
+        <div className="absolute inset-0" style={{
+          backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 2px, oklch(0.17 0.01 250) 2px, oklch(0.17 0.01 250) 4px)`
+        }}></div>
+
+        <div className="mx-auto max-w-7xl relative z-10">
           <div className="text-center">
-            <p className="text-[var(--text-muted)] mb-2">
-              Setup guide créé avec <strong className="text-[var(--text)]">Claude Code + Impeccable Design System</strong>
+            <p className="text-white/70 mb-2">
+              Setup guide créé avec <strong className="text-white">Claude Code + Impeccable Design System</strong>
             </p>
-            <p className="text-xs text-[var(--text-subtle)] flex items-center justify-center gap-4 flex-wrap">
+            <p className="text-xs text-white/50 flex items-center justify-center gap-4 flex-wrap">
               <span>OKLCH colors</span>
               <span>•</span>
               <span>Pas de false urgency</span>
@@ -651,9 +768,9 @@ claude`}
                 href="https://github.com/butlucratif/claude-code-setup-guide"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-[var(--text-muted)] hover:text-[var(--primary)] transition-colors"
+                className="flex items-center gap-2 text-white/60 hover:text-[var(--accent)] transition-colors group"
               >
-                <ExternalLink className="w-5 h-5" />
+                <ExternalLink className="w-5 h-5 group-hover:transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 <span className="text-sm font-semibold">Source sur GitHub</span>
               </a>
             </div>
