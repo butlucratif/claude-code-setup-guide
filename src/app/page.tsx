@@ -184,7 +184,7 @@ export default function Home() {
               Transforme ton <span className="bg-gradient-to-r from-[var(--primary)] via-[var(--accent)] to-[var(--warning)] bg-clip-text text-transparent">Claude Code</span> en Machine de Guerre IA
             </h1>
             <p className="text-xl text-white/70 max-w-4xl mx-auto mb-8 leading-relaxed">
-              <strong className="text-white">87+ skills experts</strong>, <strong className="text-white">277 agents spécialisés</strong>, et <strong className="text-white">115 commandes</strong> pour créer et vendre de l'IA aux entreprises. La même config que les pros qui facturent €15k-€45k par projet.
+              <strong className="text-white">87+ skills experts</strong>, <strong className="text-white">277 agents spécialisés</strong>, et <strong className="text-white">115 commandes</strong> pour créer et vendre de l'IA aux entreprises. La même config que les pros qui facturent €2k-€5k par projet.
             </p>
             <div className="flex gap-4 justify-center flex-wrap mb-12">
               <a
@@ -654,7 +654,7 @@ claude`}
               </span>
             </h2>
             <p className="text-2xl md:text-3xl text-white/70 max-w-3xl mx-auto leading-relaxed font-light">
-              De zéro à <strong className="text-white font-bold">€2k—€45k par client</strong>
+              De zéro à <strong className="text-white font-bold">€2k—€5k par client</strong>
             </p>
           </div>
 
@@ -727,11 +727,8 @@ claude`}
 
             {/* Sub-text */}
             <div className="mt-10 max-w-2xl mx-auto">
-              <p className="text-white/80 text-lg mb-3 leading-relaxed">
-                On analyse ton profil et je te montre <strong className="text-white">comment facturer €2k—€45k</strong> en créant des applications IA pour les entreprises.
-              </p>
-              <p className="text-white/50 text-sm">
-                Pas de vente forcée. Si t'es développeur et que tu veux monétiser l'IA, cet appel est pour toi.
+              <p className="text-white/80 text-lg leading-relaxed">
+                On analyse ton profil et je te montre <strong className="text-white">comment facturer €2k—€5k</strong> en créant des applications IA pour les entreprises.
               </p>
             </div>
           </div>
